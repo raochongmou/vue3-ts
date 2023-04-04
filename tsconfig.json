@@ -1,0 +1,29 @@
+{
+  "vueCompilerOptions": {
+    "experimentalDisableTemplateSupport": true,
+  },
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "types": ["vite/client"],
+    // ...
+    "baseUrl": "src",  // 这里需要配置
+    "module": "esnext",
+    "paths": {
+      "@/*": ["./*"],  // 这里需要配置
+      "views": ["@/views"]
+    },
+    "lib": ["es2021", "WebWorker", "DOM"],
+    "allowJs": true,
+    // 如果baseUrl设置为'src',那paths就应该配置为{"@/*": "./*"},如下：
+    // "baseUrl": "src",
+    // "paths": {
+    //  "@/*": ["./*"]
+    // }
+    // "strict": false,
+    // "noImplicitAny": false
+    // 相关baseUrl，paths说明请查看官方文档
+  },
+// include也需要配置以下：
+"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.ts", "src/main.ts"],
+"exclude": ["node_modules"]
+}
