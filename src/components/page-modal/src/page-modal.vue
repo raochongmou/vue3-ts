@@ -34,8 +34,6 @@ export default defineComponent({
     }
   },
   setup(props) {
-    console.log("props", props.modalForm);
-    
     const centerDialogVisible = ref(false);
     const formData = ref({});
     const store = useStore();
